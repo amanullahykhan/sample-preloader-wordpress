@@ -71,11 +71,14 @@ Configuring the preloader is incredibly simple:
 
 ---
 
-## 👨‍💻 Author
-
-**Amanullah Khan**
-
-* 💼 A passionate WordPress developer crafting highly optimized and clean digital solutions.
+## 👤 Author & Developer
+* **Amanullah Khan
+* **Developer & Maintainer:** Web Development, Front-End Engineering & Social Media Management
+* **Location:** Pakistan
+* **GitHub:** [GitHub Profile](https://github.com/amanullahykhan)
+* **HuggingFace:** [HF Profile](https://huggingface.co/ak32khan)
+* **LinkedIn:** [Linkedin](https://www.linkedin.com/in/amanullahykhan/)
+* **Support:** [☕ Buy Me a Coffee](https://amanullahykhan.gumroad.com/l/niekk)
 
 ---
 
