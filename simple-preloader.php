@@ -118,7 +118,7 @@ class Simple_Preloader {
         $bg_color = get_option('simple_preloader_bg_color', '#ffffff');
         $spinner_color = get_option('simple_preloader_spinner_color', '#333333');
 
-        // Inline CSS for performance (no extra HTTP request)
+        // Inline CSS
         $css = "
             #sl-preloader {
                 position: fixed;
@@ -162,9 +162,12 @@ class Simple_Preloader {
             }
         ";
 
-        wp_add_inline_style('wp-block-library', $css); // Hook into existing style queue
+        // Safely register a custom style handle and add the inline CSS to it
+        wp_register_style('sl-preloader-css', false);
+        wp_enqueue_style('sl-preloader-css');
+        wp_add_inline_style('sl-preloader-css', $css);
 
-        // Inline JS for performance
+        // Inline JS
         $js = "
             document.addEventListener('DOMContentLoaded', function() {
                 window.addEventListener('load', function() {
@@ -183,7 +186,10 @@ class Simple_Preloader {
             });
         ";
 
-        wp_add_inline_script('jquery-core', $js); // Hook into existing script queue
+        // Safely register a custom script handle and add the inline JS to it
+        wp_register_script('sl-preloader-js', false);
+        wp_enqueue_script('sl-preloader-js');
+        wp_add_inline_script('sl-preloader-js', $js);
     }
 }
 
